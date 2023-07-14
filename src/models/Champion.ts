@@ -1,3 +1,5 @@
+import { Trait } from "./Trait"
+
 export interface ChampionApi {
   type: string
   format: string
@@ -16,7 +18,7 @@ export interface Champion {
   blurb: string
   allytips: string[]
   enemytips: string[]
-  tags: string[]
+  tags: Trait[]
   partype: string
   info: Info
   stats: Stats
