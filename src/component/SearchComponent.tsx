@@ -35,7 +35,7 @@ export function SearchComponent({ filters, onFilter }: SearchComponentProps) {
           Search Champion Name
         </legend>
         <input
-          className='block mt-2 border-4 border-[#f2922c] bg-[#1E2323] rounded px-4 py-4 text-2xl'
+          className='block mt-2 border-4 border-[#f2922c] bg-[#1E2323] text-white rounded px-4 py-4 text-2xl'
           type='search'
           name='search'
           id='search'
@@ -48,7 +48,7 @@ export function SearchComponent({ filters, onFilter }: SearchComponentProps) {
           Champion Trait
         </legend>
         <input
-          className='block mt-2 border-4 border-[#f2922c] bg-[#1E2323] rounded px-4 py-4 text-2xl'
+          className='block mt-2 border-4 border-[#f2922c] bg-[#1E2323] text-white rounded px-4 py-4 text-2xl'
           type='search'
           name='trait'
           id='trait'
