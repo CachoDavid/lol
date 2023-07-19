@@ -2,40 +2,6 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <script type="text/javascript">
-      // Single Page Apps for GitHub Pages
-
-      // https://github.com/rafgraph/spa-github-pages
-
-      // Este script tira o caminho de `window.location`, verifica se uma URL real existe no servidor e redireciona para ela se existir.
-
-      // Se o arquivo solicitado não existir, serve index.html.
-
-      var segmentCount = 1 // Ajuste para o número de segmentos de caminho que devem ser ignorados.
-
-      var l = window.location
-
-      l.replace(
-        l.protocol +
-          '//' +
-          l.hostname +
-          (l.port ? ':' + l.port : '') +
-          l.pathname
-            .split('/')
-            .slice(0, 1 + segmentCount)
-            .join('/') +
-          '/?p=/' +
-          l.pathname
-            .slice(1)
-            .split('/')
-            .slice(segmentCount)
-            .join('/')
-            .replace(/&/g, '~and~') +
-          (l.search ? '&q=' + l.search.slice(1).replace(/&/g, '~and~') : '') +
-          l.hash
-      )
-    </script>
-
     <link
       rel="preconnect"
       href="https://fonts.googleapis.com" />
