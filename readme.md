@@ -19,42 +19,28 @@
 ### Api
 
 - [-] Install and configure react-query (tanstack)
-- [ ] Create Champion Services endpoints:
+- [x] Create Champion Services endpoints:
 
   http://ddragon.leagueoflegends.com/cdn/13.13.1/data/en_US/champion.json
 
   - [x] Get all champions: GetAll
     - [x] Map to respective typing
-  - [ ] Get champion by id: GetById
-    - [ ] Map to respective typing
+  - [x] Get champion by id: GetById
+    - [x] Map to respective typing
 
-- [ ] Apply endpoints on routes
+- [x] Apply endpoints on routes
 
 ### Design
 
-- [ ] Configure shadcn/ui
-- [ ] Create base layout for pages:
-  - [ ] Home page
-  - [ ] Details page
-- [ ] Components:
-  - [ ] Champion Card
-  - [ ] Skin Carrousel
-  - [ ] Champion Profile Card....
+- [x] Configure shadcn/ui
+- [x] Create base layout for pages:
+  - [x] Home page
+  - [x] Details page
+- [x] Components:
+  - [x] Champion Card
+  - [-] Skin Carrousel
+  - [x] Champion Profile Card....
 
 ### Git
 
 -[X] New Git repository
-
-// Comportamento normal das APIs
-
-- Endpoint GET para retornar uma lista, que normalmente tem menos campos que uma detalhes sobre cada item //ex. champions.json
-- Endpoint GET para retornar um item que traz normalmente muito mais detalhes sobre o mesmo //Aatrox.json
-
-// Página de listagem: que usa o primeiro endpoint
---> O INPUT QUE TENS NA HOMEPAGE DEVE FILTRAR OS REGISTOS QUE JÁ OBTIVESTE NA PRIMEIRA INVOCAÇÃO
-// Página de detalhe: que usa o segundo endpoint
---> Tentamos obter o registo, se não retornar não existe
-
-1. ENTRASTE NA HOME - INVOCASTE A API NUM 1
-2. FIZESTE PESQUISA NO INPUT - INVOCASTE A API NUM 1
-3. TENS VALIDAÇÃO DE REGISTO NA PAGINA DE DETALHES - INVOCASTE A API NUM 2
