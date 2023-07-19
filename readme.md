@@ -23,8 +23,8 @@
 
   http://ddragon.leagueoflegends.com/cdn/13.13.1/data/en_US/champion.json
 
-  - [ ] Get all champions: GetAll
-    - [ ] Map to respective typing
+  - [x] Get all champions: GetAll
+    - [x] Map to respective typing
   - [ ] Get champion by id: GetById
     - [ ] Map to respective typing
 
@@ -51,10 +51,10 @@
 - Endpoint GET para retornar um item que traz normalmente muito mais detalhes sobre o mesmo //Aatrox.json
 
 // Página de listagem: que usa o primeiro endpoint
---> O INPUT QUE TENS NA HOMEPAGE DEVE FILTRAR OS REGISTOS QUE JÁ OBRIVESTE NA PRIMEIRA INVOCÃO
+--> O INPUT QUE TENS NA HOMEPAGE DEVE FILTRAR OS REGISTOS QUE JÁ OBTIVESTE NA PRIMEIRA INVOCAÇÃO
 // Página de detalhe: que usa o segundo endpoint
 --> Tentamos obter o registo, se não retornar não existe
 
 1. ENTRASTE NA HOME - INVOCASTE A API NUM 1
 2. FIZESTE PESQUISA NO INPUT - INVOCASTE A API NUM 1
-3. TENS VALIDACAO DE REGISTO NA PAGINA DE DETALHES - INVOCASTE A API NUM 2
+3. TENS VALIDAÇÃO DE REGISTO NA PAGINA DE DETALHES - INVOCASTE A API NUM 2

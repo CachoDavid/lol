@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: #101313;
+  font: 400 1rem Roboto, sans-serif;
+  color: #f2922c;
+}
