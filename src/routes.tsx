@@ -6,12 +6,12 @@ import { championService } from './services/ChampionService'
 
 export const router = createBrowserRouter([
   {
-    path: '/lol/',
+    path: '/',
     loader: () => championService.getAll(), // Esta função serve para executar uma função no carregamento da página
     element: <HomePage />
   },
   {
-    path: '/lol/champions/:id',
+    path: '/champions/:id',
     loader: async ({ params }) => {
       if (!params.id) {
         return redirect('/')
@@ -26,7 +26,7 @@ export const router = createBrowserRouter([
     path: '*',
     element: (
       <Navigate
-        to='/lol'
+        to='/'
         replace
       />
     )

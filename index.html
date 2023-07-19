@@ -2,6 +2,15 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <script>
+      if (sessionStorage.redirect) {
+        history.replaceState(null, null, sessionStorage.redirect)
+        delete sessionStorage.redirect
+      }
+    </script>
+    <meta
+      http-equiv="refresh"
+      content="0;URL='/lol'" />
     <link
       rel="preconnect"
       href="https://fonts.googleapis.com" />
