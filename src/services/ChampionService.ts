@@ -17,7 +17,7 @@ class ChampionService implements IChampionService {
   // Esta função é chamada no carregamento da página Home
   async getAll(): Promise<Array<ChampionSummary>> {
     const response = await fetch(
-      'http://ddragon.leagueoflegends.com/cdn/13.13.1/data/en_US/champion.json'
+      'https://ddragon.leagueoflegends.com/cdn/13.13.1/data/en_US/champion.json'
     )
     const data = (await response.json()) as ChampionListApi
     const champions = Object.values(data.data)
@@ -28,7 +28,7 @@ class ChampionService implements IChampionService {
   async getById(id: string): Promise<Champion | null> {
     try {
       const response = await fetch(
-        `http://ddragon.leagueoflegends.com/cdn/13.13.1/data/en_US/champion/${id}.json`
+        `https://ddragon.leagueoflegends.com/cdn/13.13.1/data/en_US/champion/${id}.json`
       )
       const data = (await response.json()) as ChampionApi
       const champions = Object.values(data.data)

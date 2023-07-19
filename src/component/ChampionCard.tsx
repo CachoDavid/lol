@@ -32,7 +32,7 @@ export function ChampionCard({ champion }: ChampionCardProps) {
     <div className='relative'>
       <a href={`/champions/${champion.id}`}>
         <img
-          src={`http://ddragon.leagueoflegends.com/cdn/img/champion/loading/${champion.id}_0.jpg`}
+          src={`https://ddragon.leagueoflegends.com/cdn/img/champion/loading/${champion.id}_0.jpg`}
           alt={champion.name}
           className='flex rounded-xl mt-4 w-80 border-4 border-[#1E2323]'
         />

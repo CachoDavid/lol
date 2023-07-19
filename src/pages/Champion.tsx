@@ -34,12 +34,12 @@ export default function ChampionPage() {
     {
       name: champion.passive.name,
       description: champion.passive.description,
-      image: `http://ddragon.leagueoflegends.com/cdn/13.14.1/img/passive/${champion.passive.image.full}`
+      image: `https://ddragon.leagueoflegends.com/cdn/13.14.1/img/passive/${champion.passive.image.full}`
     },
     ...champion.spells.map((spell) => ({
       name: spell.name,
       description: spell.description,
-      image: `http://ddragon.leagueoflegends.com/cdn/13.14.1/img/spell/${spell.image.full}`
+      image: `https://ddragon.leagueoflegends.com/cdn/13.14.1/img/spell/${spell.image.full}`
     }))
   ]
 
@@ -53,7 +53,7 @@ export default function ChampionPage() {
     return str.replace(/<[^>]+>/g, '')
   }
 
-  const bgImage = `http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champion.id}_0.jpg`
+  const bgImage = `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${champion.id}_0.jpg`
   return (
     <div className='grid grid-cols-[3fr_0] md:grid-cols-[1fr_3fr]  gap-0'>
       <div className='p-10 text-white'>
@@ -65,7 +65,7 @@ export default function ChampionPage() {
         <div>
           <div className='flex items-center justify-center  '>
             <img
-              src={`http://ddragon.leagueoflegends.com/cdn/13.14.1/img/champion/${champion.id}.png`}
+              src={`https://ddragon.leagueoflegends.com/cdn/13.14.1/img/champion/${champion.id}.png`}
               alt={champion.name}
               className='rounded-full mt-4 w-40 border-[#1E2323] outline outline-8 -outline-offset-4 outline-[#101313]'
             />

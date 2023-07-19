@@ -21,7 +21,7 @@
 - [-] Install and configure react-query (tanstack)
 - [x] Create Champion Services endpoints:
 
-  http://ddragon.leagueoflegends.com/cdn/13.13.1/data/en_US/champion.json
+  https://ddragon.leagueoflegends.com/cdn/13.13.1/data/en_US/champion.json
 
   - [x] Get all champions: GetAll
     - [x] Map to respective typing
