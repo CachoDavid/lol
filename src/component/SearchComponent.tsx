@@ -1,77 +1,61 @@
-import { ChangeEvent, useState } from 'react'
+import { ChangeEvent } from 'react'
 
-import { ChampionSummary } from '@/models/ChampionSummary'
 import { Trait } from '@/models/Trait'
+import { Filters } from '@/pages/Home'
 
 interface SearchComponentProps {
-  championsData: ChampionSummary[]
-  onFilter: (filteredChampions: ChampionSummary[]) => void
+  filters: Filters
+  onFilter: (filters: Filters) => void
 }
 
-export function SearchComponent({
-  championsData,
-  onFilter
-}: SearchComponentProps) {
-  const [search, setSearch] = useState<string>('')
-  const [trait, setTrait] = useState<Trait | undefined>(undefined)
+export function SearchComponent({ filters, onFilter }: SearchComponentProps) {
+  // const [search, setSearch] = useState<string>('')
+  // const [trait, setTrait] = useState<Trait | undefined>(undefined)
 
   function handleSearch(e: ChangeEvent<HTMLInputElement>) {
     const value = e.target.value
-    setSearch(value)
-    applyFilters()
+
+    const updatedFilters = {
+      ...filters,
+      search: value.length > 0 ? value : null
+    }
+    onFilter(updatedFilters)
   }
 
   function handleTrait(e: ChangeEvent<HTMLInputElement>) {
     const value = e.target.value as Trait
-    setTrait(value)
-    applyFilters()
-  }
-
-  function applyFilters() {
-    const filteredChampions = championsData.filter((champion) => {
-      const matchesChampionName = champion.name
-        .toLowerCase()
-        .includes(search.toLowerCase())
-
-      const matchesChampionId = champion.id
-        .toLowerCase()
-        .includes(search.toLowerCase())
-
-      const matchesChampionTrait = trait
-        ? champion.tags.find((tag) =>
-            tag.toLowerCase().includes(trait.toLowerCase())
-          )
-        : true
-      return (matchesChampionName || matchesChampionId) && matchesChampionTrait
-    })
-
-    onFilter(filteredChampions)
+    const updatedFilters = { ...filters, tag: value.length > 0 ? value : null }
+    onFilter(updatedFilters)
   }
 
   return (
-    <>
-      <div className='bg-[#1E2323]'>
-        <legend className='text-2xl bg-[#1E2323]'>SEARCH</legend>
+    <div className='flex gap-6 flex-col pb-6 sm:flex-row sm:pb-0'>
+      <div className='bg-transparent'>
+        <legend className='text-2xl bg-transparent text-white text-md'>
+          Search Champion Name
+        </legend>
         <input
           className='block mt-2 border-4 border-[#f2922c] bg-[#1E2323] rounded px-4 py-4 text-2xl'
           type='search'
           name='search'
           id='search'
-          value={search}
+          value={filters.search ?? ''}
           onChange={handleSearch}
         />
       </div>
-      <div className='bg-[#1E2323]'>
-        <legend className='text-2xl bg-[#1E2323]'>Tag</legend>
+      <div className='bg-transparent'>
+        <legend className='text-2xl bg-transparent text-white text-md'>
+          Champion Trait
+        </legend>
         <input
           className='block mt-2 border-4 border-[#f2922c] bg-[#1E2323] rounded px-4 py-4 text-2xl'
           type='search'
           name='trait'
           id='trait'
-          value={trait}
+          value={filters.tag ?? ''}
           onChange={handleTrait}
         />
       </div>
-    </>
+    </div>
   )
 }
